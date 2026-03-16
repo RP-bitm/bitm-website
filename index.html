@@ -1,23 +1,197 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BITM Website</title>
-    <meta name="google-site-verification" content="7ozxx7de80sUSxw5yZXSiPCxr0nxaYz8qwsKN4vhOLU" />
-    <link rel="stylesheet" href="style.css">
+
+<title>BITM English Lessons</title>
+
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="7ozxx7de80sUSxw5yZXSiPCxr0nxaYz8qwsKN4vhOLU" />
+
+...
 </head>
+
+<body>
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#e8f7ee;
+transition:0.3s;
+}
+
+header{
+background:#5bcf95;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+nav{
+background:#3fb37c;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+.container{
+padding:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.lesson-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.lesson-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.lesson-card:hover{
+transform:scale(1.05);
+}
+
+.lesson-card a{
+text-decoration:none;
+color:#2c3e50;
+font-weight:bold;
+}
+
+.search-box{
+text-align:center;
+margin:20px;
+}
+
+#searchInput{
+width:60%;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.darkmode{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#555;
+}
+
+.dark{
+background:#1f1f1f;
+color:white;
+}
+
+</style>
+
+<script>
+
+function searchLessons(){
+
+let input=document.getElementById("searchInput").value.toLowerCase();
+
+let cards=document.getElementsByClassName("lesson-card");
+
+for(let i=0;i<cards.length;i++){
+
+let text=cards[i].innerText.toLowerCase();
+
+if(text.includes(input)){
+cards[i].style.display="";
+}else{
+cards[i].style.display="none";
+}
+
+}
+
+}
+
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+
+</script>
+
+</head>
+
 <body>
 
-    <h1>Welcome to BITM</h1>
+<header>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="eng.html">English</a> |
-        <a href="about.html">About</a>
-    </nav>
+<h1>BITM English Lessons</h1>
+<p>Notes, Summaries and Exam Answers</p>
 
-    <p>This website is created by a Nepalese student.</p>
+<button class="darkmode" onclick="toggleDark()">Dark Mode</button>
+
+</header>
+
+<nav>
+
+<a href="index.html">Home</a> <a href="lesson1.html">Lesson 1</a> <a href="lesson2.html">Lesson 2</a> <a href="lesson3.html">Lesson 3</a> <a href="lesson4.html">Lesson 4</a>
+
+</nav>
+
+<div class="search-box">
+
+<input type="text" id="searchInput" onkeyup="searchLessons()" placeholder="Search lesson...">
+
+</div>
+
+<div class="container">
+
+<h2>Lessons</h2>
+
+<div class="lesson-grid">
+
+<div class="lesson-card">
+<a href="lesson1.html">Lesson 1</a>
+</div>
+
+<div class="lesson-card">
+<a href="lesson2.html">Lesson 2</a>
+</div>
+
+<div class="lesson-card">
+<a href="lesson3.html">Lesson 3</a>
+</div>
+
+<div class="lesson-card">
+<a href="lesson4.html">Lesson 4 – Friendship Bond</a>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>Created by Rone | BITM Student</p>
+
+<!-- Visitor Counter -->
+
+<script type="text/javascript" src="https://counter.websiteout.net/js/5/0/0/0"></script>
+
+</footer>
 
 </body>
 </html>
-
-
