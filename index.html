@@ -1,152 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>BITM 1st Semester Notes</title>
-<meta charset="UTF-8">
-<meta name="google-site-verification" content="7ozxx7de80sUSxw5yZXSiPCxr0nxaYz8qwsKN4vhOLU">
-<meta name="description" content="BITM 1st semester notes, English lessons, management and programming notes">
-<meta name="keywords" content="BITM notes, BITM English lessons, BITM Nepal notes, programming C notes">
-<meta name="author" content="Rone">
+    <meta charset="UTF-8">
+    <title>BITM 1st Semester Notes</title>
+    <meta name="google-site-verification" content="7ozxx7de80sUSxw5yZXSiPCxr0nxaYz8qwsKN4vhOLU">
+    <meta name="description" content="BITM 1st semester notes, lessons and exam answers">
+    <meta name="keywords" content="BITM notes, English, Management, C Programming, Mathematics">
+    <meta name="author" content="Rone">
 
-<style>
-body{
-    font-family:Arial, sans-serif;
-    margin:0;
-    background:#e8f7ee;
-}
-header{
-    background:#3fb37c;
-    color:white;
-    padding:30px;
-    text-align:center;
-}
-nav{
-    background:#2e9f6b;
-    padding:10px;
-    text-align:center;
-}
-nav a{
-    color:white;
-    margin:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
-nav a:hover{
-    text-decoration:underline;
-}
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:30px;
-}
-.search{
-    text-align:center;
-    margin-bottom:25px;
-}
-#searchInput{
-    padding:10px;
-    width:60%;
-    border-radius:6px;
-    border:1px solid #ccc;
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-.card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-.card:hover{
-    transform:scale(1.05);
-}
-.card a{
-    text-decoration:none;
-    font-size:18px;
-    color:#333;
-    font-weight:bold;
-}
-footer{
-    text-align:center;
-    padding:20px;
-    color:#555;
-}
-</style>
+    <style>
+        body { font-family: Arial, sans-serif; margin:0; background:#e8f7ee; }
+        header { background:#3fb37c; color:white; padding:30px; text-align:center; }
+        nav { background:#2e9f6b; padding:10px; text-align:center; }
+        nav a { color:white; margin:10px; text-decoration:none; font-weight:bold; }
+        nav a:hover { text-decoration:underline; }
+        .container { max-width:1100px; margin:auto; padding:30px; }
+        .search { text-align:center; margin-bottom:25px; }
+        #searchInput { padding:10px; width:60%; border-radius:6px; border:1px solid #ccc; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
+        .card { background:white; padding:25px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:0.3s; }
+        .card:hover { transform:scale(1.05); }
+        .card a { text-decoration:none; font-size:16px; color:#333; font-weight:bold; display:block; margin:3px 0; }
+        footer { text-align:center; padding:20px; color:#555; }
+    </style>
 
-<script>
-function searchSubjects(){
-    let input=document.getElementById("searchInput").value.toLowerCase();
-    let cards=document.getElementsByClassName("card");
-    for(let i=0;i<cards.length;i++){
-        let text=cards[i].innerText.toLowerCase();
-        if(text.includes(input)){
-            cards[i].style.display="";
-        }else{
-            cards[i].style.display="none";
+    <script>
+        function searchSubjects() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let cards = document.getElementsByClassName("card");
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
         }
-    }
-}
-</script>
+    </script>
 </head>
 <body>
+
 <header>
-<h1>BITM 1st Semester Notes</h1>
-<p>Study Materials, Lessons and Exam Answers</p>
+    <h1>BITM 1st Semester Notes</h1>
+    <p>Study Materials, Lessons, and Exam Answers</p>
 </header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="english.html">English</a>
-  <a href="management.html">Management</a>
-  <a href="computer.html">Computer</a>
-  <a href="math.html">Mathematics</a>
+    <a href="index.html">Home</a>
+    <a href="english.html">English</a>
+    <a href="management.html">Management</a>
+    <a href="computer.html">Computer</a>
+    <a href="math.html">Mathematics</a>
 </nav>
 
 <div class="container">
-  <!-- English Card -->
-  <div class="card">
-    <a href="english.html">English</a>
-    <div style="margin-top:10px; text-align:left;">
-      <a href="lesson1.html">Lesson 1 – The Trumpet of Conscience</a><br>
-      <a href="lesson2.html">Lesson 2 – A Gas Station Burns</a><br>
-      <a href="lesson3.html">Lesson 3</a><br>
-      <a href="lesson4.html">Lesson 4 – The Friendship Bond</a>
+    <div class="search">
+        <input type="text" id="searchInput" onkeyup="searchSubjects()" placeholder="Search subject or lesson...">
     </div>
-  </div>
 
-  <!-- Management Card -->
-  <div class="card">
-    <a href="management.html">Management</a>
-    <div style="margin-top:10px; text-align:left;">
-      <a href="management1.html">Lesson 1 – Introduction to Management</a><br>
-      <a href="management2.html">Lesson 2 – Planning & Organization</a><br>
-      <a href="management3.html">Lesson 3 – Leadership & Motivation</a>
+    <h2>Subjects & Lessons</h2>
+    <div class="grid">
+
+        <!-- English -->
+        <div class="card">
+            <a href="english.html">English</a>
+            <a href="lesson1.html">Lesson 1 – The Trumpet of Conscience</a>
+            <a href="lesson2.html">Lesson 2 – A Gas Station Burns</a>
+            <a href="lesson3.html">Lesson 3</a>
+            <a href="lesson4.html">Lesson 4 – The Friendship Bond</a>
+        </div>
+
+        <!-- Management -->
+        <div class="card">
+            <a href="management.html">Management</a>
+            <a href="management1.html">Lesson 1 – Introduction to Management</a>
+            <a href="management2.html">Lesson 2 – Planning & Organization</a>
+            <a href="management3.html">Lesson 3 – Leadership & Motivation</a>
+        </div>
+
+        <!-- Computer Programming (C) -->
+        <div class="card">
+            <a href="computer.html">Computer Programming (C)</a>
+            <a href="c1.html">Lesson 1 – Introduction to C</a>
+            <a href="c2.html">Lesson 2 – Variables & Data Types</a>
+            <a href="c3.html">Lesson 3 – Loops & Conditionals</a>
+        </div>
+
+        <!-- Mathematics -->
+        <div class="card">
+            <a href="math.html">Mathematics</a>
+            <a href="math1.html">Lesson 1 – Basic Algebra</a>
+            <a href="math2.html">Lesson 2 – Geometry</a>
+            <a href="math3.html">Lesson 3 – Trigonometry</a>
+        </div>
+
     </div>
-  </div>
-</div>
-
-<div class="container">
-<div class="search">
-<input type="text" id="searchInput" onkeyup="searchSubjects()" placeholder="Search subject or lesson...">
-</div>
-
-<h2>Subjects</h2>
-<div class="grid">
-<div class="card"><a href="english.html">English</a></div>
-<div class="card"><a href="management.html">Management</a></div>
-<div class="card"><a href="computer.html">Computer Programming (C)</a></div>
-<div class="card"><a href="math.html">Mathematics</a></div>
-</div>
 </div>
 
 <footer>
-<p>Created by Rone | BITM Student</p>
-<script src="https://counter.websiteout.net/js/5/0/0/0"></script>
+    <p>Created by Rone | BITM Student</p>
+    <script src="https://counter.websiteout.net/js/5/0/0/0"></script>
 </footer>
+
 </body>
 </html>
