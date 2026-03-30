@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BITM Unit 1: Structured Programming in C</title>
+<style>
+    body {font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; color: #333; margin: 0; padding: 20px;}
+    h1, h2, h3 {color: #2c3e50;}
+    pre {background-color: #ecf0f1; padding: 10px; border-left: 4px solid #2980b9; overflow-x: auto;}
+    table {width: 100%; border-collapse: collapse; margin: 10px 0;}
+    table, th, td {border: 1px solid #aaa;}
+    th, td {padding: 8px; text-align: left;}
+    code {background-color: #ecf0f1; padding: 2px 4px; border-radius: 3px;}
+    .section {background-color: #fff; padding: 15px 20px; margin: 15px 0; box-shadow: 0 0 5px rgba(0,0,0,0.1); border-left: 5px solid #2980b9;}
+</style>
+</head>
+<body>
+
+<h1>BITM – Structured Programming in C</h1>
+<h2>Unit 1: Introduction to Programming</h2>
+
+<!-- Section A -->
+<div class="section">
+<h2>Section A: Very Short Questions (1 mark each)</h2>
+<ul>
+    <li><strong>What is a computer program?</strong><br>Ans: A set of instructions written in a programming language like C, Java, etc.</li>
+    <li><strong>Define algorithm.</strong><br>Ans: Step-by-step procedure written before coding to solve a problem.</li>
+    <li><strong>What is a flowchart?</strong><br>Ans: Graphical representation of an algorithm using symbols.</li>
+    <li><strong>What is a compiler?</strong><br>Ans: Translates the entire source code into machine code at once and executes it.</li>
+    <li><strong>What is a keyword in C?</strong><br>Ans: Reserved words with predefined meaning like <code>int</code>, <code>float</code>, <code>return</code>.</li>
+    <li><strong>What is a variable?</strong><br>Ans: Named memory location used to store data that can change during execution.</li>
+    <li><strong>What is a constant?</strong><br>Ans: Fixed value that cannot change during program execution.</li>
+    <li><strong>Use of printf()</strong><br>Ans: Displays output on the screen.</li>
+    <li><strong>Use of scanf()</strong><br>Ans: Takes input from user and stores it in memory.</li>
+    <li><strong>Two features of C</strong><br>1. Easy to understand<br>2. Easy to debug</li>
+    <li><strong>What is an identifier?</strong><br>Ans: Name of a variable, function, or array in C.</li>
+</ul>
+</div>
+
+<!-- Section B -->
+<div class="section">
+<h2>Section B: Short Questions (3–5 marks)</h2>
+
+<h3>1. Differentiate between Algorithm and Flowchart</h3>
+<table>
+<tr><th>Algorithm</th><th>Flowchart</th></tr>
+<tr><td>Step-by-step text procedure written before coding</td><td>Graphical representation of algorithm</td></tr>
+<tr><td>Helps plan logic</td><td>Shows flow of program</td></tr>
+<tr><td>Text-based</td><td>Diagram-based</td></tr>
+</table>
+
+<h3>2. Structure of a C Program</h3>
+<p>A C program is divided into several sections for readability and execution:</p>
+<ol>
+<li><strong>Documentation Section:</strong> Comments using <code>//</code> or <code>/* */</code></li>
+<li><strong>Preprocessor Section:</strong> Includes header files using <code>#include</code></li>
+<li><strong>Definition Section:</strong> Defines constants using <code>#define</code></li>
+<li><strong>Global Declaration:</strong> Variables and functions accessible throughout program</li>
+<li><strong>main() Function:</strong> Starting point of execution</li>
+<li><strong>Local Declaration:</strong> Variables inside functions</li>
+<li><strong>Executable Section:</strong> Statements and logic</li>
+<li><strong>User-defined Functions:</strong> Programmer-created functions</li>
+</ol>
+<pre>
+#include &lt;stdio.h&gt;
+#define PI 3.14
+
+int main() {
+    int a = 5;
+    printf("Hello BITM Students");
+    return 0;
+}
+</pre>
+
+<h3>3. Tokens in C</h3>
+<ul>
+<li><strong>Keywords:</strong> Reserved words like <code>int, float, return</code></li>
+<li><strong>Identifiers:</strong> Names of variables/functions. Must start with letter/underscore and not be a keyword</li>
+<li><strong>Constants:</strong> Fixed values <code>10, 3.14, 'A'</code></li>
+<li><strong>Strings:</strong> Sequence of characters in quotes: <code>"Hello"</code></li>
+<li><strong>Operators:</strong> Symbols for operations: <code>+, -, *, /, >, &&</code></li>
+<li><strong>Delimiters:</strong> Symbols to separate tokens: <code>, ; () { }</code></li>
+</ul>
+
+<h3>4. Data Types in C</h3>
+<table>
+<tr><th>Data Type</th><th>Example</th></tr>
+<tr><td>int</td><td>int a = 10;</td></tr>
+<tr><td>float</td><td>float b = 3.5;</td></tr>
+<tr><td>char</td><td>char c = 'A';</td></tr>
+<tr><td>double</td><td>double d = 3.1415;</td></tr>
+</table>
+
+<h3>5. Identifier Rules</h3>
+<ul>
+<li>Must start with letter or underscore</li>
+<li>Can contain letters, digits, underscore</li>
+<li>Cannot be a keyword</li>
+</ul>
+
+<h3>6. Compilation Process in C</h3>
+<ul>
+<li>Preprocessing: Handles <code>#include</code> and <code>#define</code></li>
+<li>Compilation: Converts source code to assembly code</li>
+<li>Assembly: Converts assembly code to machine code</li>
+<li>Linking: Combines all files and libraries</li>
+<li>Execution: Runs the program</li>
+</ul>
+
+<h3>7. Differences between Variable and Constant</h3>
+<table>
+<tr><th>Variable</th><th>Constant</th></tr>
+<tr><td>Value can change</td><td>Value cannot change</td></tr>
+<tr><td>Stored in memory</td><td>Fixed in memory</td></tr>
+<tr><td>Declared using data type</td><td>Declared using <code>#define</code> or <code>const</code></td></tr>
+</table>
+</div>
+
+<!-- Section C -->
+<div class="section">
+<h2>Section C: Long Questions (8–10 marks)</h2>
+<ul>
+<li>Explain basic structure of a C program with example</li>
+<li>Explain data types in C with examples</li>
+<li>Describe algorithm and flowchart with advantages/disadvantages</li>
+<li>Explain tokens in C in detail with examples</li>
+<li>Explain compilation process in C</li>
+<li>Difference between variable and constant</li>
+<li>Identifier rules</li>
+</ul>
+</div>
+
+<!-- Section D -->
+<div class="section">
+<h2>Section D: Programming Questions</h2>
+
+<h3>1. Print Hello BITM Students</h3>
+<pre>
+#include &lt;stdio.h&gt;
+int main() {
+    printf("Hello BITM Students");
+    return 0;
+}
+</pre>
+
+<h3>2. Input two numbers and display sum</h3>
+<pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("Sum = %d", sum);
+    return 0;
+}
+</pre>
+
+<h3>3. Area of Rectangle</h3>
+<pre>
+#include &lt;stdio.h&gt;
+int main() {
+    float length, width, area;
+    printf("Enter length and width: ");
+    scanf("%f %f", &length, &width);
+    area = length * width;
+    printf("Area = %.2f", area);
+    return 0;
+}
+</pre>
+
+<h3>4. Celsius to Fahrenheit</h3>
+<pre>
+#include &lt;stdio.h&gt;
+int main() {
+    float c, f;
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &c);
+    f = (c * 9/5) + 32;
+    printf("Temperature in Fahrenheit: %.2f", f);
+    return 0;
+}
+</pre>
+
+<h3>5. Swap two numbers using third variable</h3>
+<pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a, b, temp;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    temp = a;
+    a = b;
+    b = temp;
+    printf("After swapping: a = %d, b = %d", a, b);
+    return 0;
+}
+</pre>
+</div>
+
+<!-- Viva Questions -->
+<div class="section">
+<h2>Bonus Viva Questions</h2>
+<ul>
+<li>Who developed C language? <br><strong>Ans:</strong> Dennis Ritchie, 1972</li>
+<li>What is the extension of C file? <br><strong>Ans:</strong> .c</li>
+<li>What is main() function? <br><strong>Ans:</strong> Entry point of a C program</li>
+<li>What is a header file? Example? <br><strong>Ans:</strong> Contains predefined functions. Example: <code>#include &lt;stdio.h&gt;</code></li>
+<li>Difference between = and == ? <br><strong>Ans:</strong> = Assignment, == Comparison</li>
+</ul>
+</div>
+
+</body>
+</html>
